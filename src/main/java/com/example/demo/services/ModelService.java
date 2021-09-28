@@ -32,6 +32,8 @@ public class ModelService {
         return modelRepo.findByBrandId(brandId);
     }
 
+    public List<Model> getModelByShellDimension(int dim) {return modelRepo.findByDimension(dim);}
+
     public List<Model> findModelByPhrase(String phrase) {
         List<Model> EveryModel;
         List<Model> returnModel = new ArrayList<>();

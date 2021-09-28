@@ -17,6 +17,7 @@ public class Shell {
     private String name;
     private String color;
     private String info;
+    private int dimension;
 
     public long getId() {
         return id;

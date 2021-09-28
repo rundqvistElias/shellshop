@@ -16,13 +16,11 @@ public class Model {
     private long id;
     private String name;
     private String info;
-
+    private int dimension;
 
 
     @ManyToOne
     private Brand brand;
-
-
 
 
     public Model() {
@@ -52,10 +50,19 @@ public class Model {
         this.info = info;
     }
 
-    public Model(long id, String name, String info) {
+    public String getDimension() {
+        return info;
+    }
+
+    public void setDimension(String info) {
+        this.info = info;
+    }
+
+    public Model(long id, String name, String info, int dimension) {
         this.id = id;
         this.name = name;
         this.info = info;
+        this.dimension = dimension;
     }
     @JsonIgnore
     public Brand getBrand() {
@@ -72,6 +79,9 @@ public class Model {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", info='" + info + '\'' +
+                ", dimension=" + dimension +
+                ", brand=" + brand +
                 '}';
     }
+
 }

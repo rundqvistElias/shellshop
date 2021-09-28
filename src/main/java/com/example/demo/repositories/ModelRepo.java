@@ -14,4 +14,6 @@ public interface ModelRepo extends JpaRepository<Model, Long> {
 
     List<Model> findByBrandId(long brandId);
 
+    List<Model> findByDimension(int dim);
+
 }

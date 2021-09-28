@@ -36,4 +36,7 @@ public class ModelController {
 
     @PutMapping("model/{modelId}")
     public void updateModel(@PathVariable long id, @RequestBody Model model) {modelService.updateById(id, model);}
+
+    @GetMapping("model/shell/dimension/{dim}")
+    public List<Model> getModelByShellDim(@PathVariable int dim){return modelService.getModelByShellDimension(dim);}
 }
