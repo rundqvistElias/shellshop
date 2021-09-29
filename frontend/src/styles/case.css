@@ -1,0 +1,21 @@
+.caselistbox{
+    display:flex;
+    width: 45vw;
+    flex-direction: column;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    margin: 15px;
+
+}
+
+.caseitembox{
+    display:flex;
+    width: 45vw;
+    flex-direction: column;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    margin: 15px;   
+
+}

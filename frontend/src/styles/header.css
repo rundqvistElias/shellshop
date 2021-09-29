@@ -1,0 +1,28 @@
+nav{
+    height:50px;
+    width: 100vw;
+    display:flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav>ul>li{
+    text-decoration: none;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.firstheaderitem{
+    display:flex;
+    padding:10px;
+}
+
+.secondheaderitem{
+    display: flex;
+    padding:10px;
+}
