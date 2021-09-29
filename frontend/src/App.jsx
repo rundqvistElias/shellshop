@@ -5,6 +5,17 @@ import Caselist from './components/caselist'
 import Header from './components/header'
 
 function App() {
+    const [fetchedModels, setFetchedModels] = useState([]);
+    useEffect(() => {
+      const getModels = async () =>{
+        const models = await axios.get(
+          "http://"
+        )
+      }
+      return () => {
+        cleanup
+      }
+    }, [input])
   
 
   return (
