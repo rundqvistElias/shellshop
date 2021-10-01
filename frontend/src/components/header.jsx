@@ -8,19 +8,21 @@ const Header = () =>{
 
         <nav >
            
-            <div className="firstheaderitem">
-                Case shop
-            </div>
+           <header>
+        <button onClick={() => navigateTo(PAGE_CART)}>
+          Go to Cart ({getCartTotal()})
+        </button>
 
-            <div>
-
-            </div>
-            <ul className="secondheaderitem">
-                <li>
-                    Cart
-                </li>
-        
-            </ul>
+        <button onClick={() => navigateTo(PAGE_PRODUCTS)}>
+          View Products
+        </button>
+      </header>
+      {page === PAGE_PRODUCTS && (
+        <Products cart={cart} setCart={setCart} />
+      )}
+      {page === PAGE_CART && (
+        <Cart cart={cart} setCart={setCart} />
+      )}
 
     
         </nav>

@@ -1,33 +1,48 @@
 import React, {useState, useEffect} from 'react';
 import './App.css'
-import Caseitem from './components/caseitem'
-import Caselist from './components/caselist'
-import Header from './components/header'
-import axios from 'axios';
+import Products from './pages/Products';
+import Cart from './pages/Cart';
+
+  const PAGE_CART = 'cart';
+  const PAGE_PRODUCTS = 'products';
+  function App() {
+
+  const [cart, setCart] = useState([]);
+  const [page, setPage] = useState(PAGE_PRODUCTS);
+
+  const navigateTo = (nextPage) => {
+    setPage(nextPage);
+  };
 
 
-function App() {
-  
+  const getCartTotal = () => {
+    return cart.reduce(
+      (sum, { quantity }) => sum + quantity,
+      0
+    );
+    }
 
-
-
-  /*handleSubmit = async (termFromSearchBar) => {
-    const response = await fetch ("/shell/model/"+{result})
-  }*/
-  
 
   return (
     <div className="App">
-      <Header  />
-      <div className="itemplacement">
-      <div className="caselistplacement">
-      <Caselist />
-      </div>
-      <div className="caseitemplacement">
-      <Caseitem />
-      </div>
-      </div>
+      <header>
+        <button onClick={() => navigateTo(PAGE_CART)}>
+          Go to Cart ({getCartTotal()})
+        </button>
+
+        <button onClick={() => navigateTo(PAGE_PRODUCTS)}>
+          View Products
+        </button>
+      </header>
+      {page === PAGE_PRODUCTS && (
+        <Products cart={cart} setCart={setCart} />
+      )}
+      {page === PAGE_CART && (
+        <Cart cart={cart} setCart={setCart} />
+      )}
     </div>
+    
+    
   )
 }
 
