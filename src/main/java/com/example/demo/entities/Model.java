@@ -16,6 +16,9 @@ public class Model {
     private long id;
     private String name;
     private String info;
+
+
+
     private int dimension;
 
 
@@ -50,13 +53,10 @@ public class Model {
         this.info = info;
     }
 
-    public String getDimension() {
-        return info;
-    }
+    public int getDimension() { return dimension; }
 
-    public void setDimension(String info) {
-        this.info = info;
-    }
+    public void setDimension(int dimension) { this.dimension = dimension; }
+
 
     public Model(long id, String name, String info, int dimension) {
         this.id = id;

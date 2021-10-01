@@ -1,18 +1,18 @@
 import React from "react";
 import '../styles/case.css'
+import Caselist from "./caselist";
 
-const Caseitem = () => {
+const CaseItem = (props) => {
+
 
     return(
         <div className="caseitembox">
 
-            Case
-
-            info
-
-            phone models
+        <li >
+            <div></div>
+        </li>
         </div>
     )
 }
 
-export default Caseitem;
+export default CaseItem;

@@ -51,6 +51,14 @@ public class Shell {
         this.info = info;
     }
 
+    public int getDimension() {
+        return dimension;
+    }
+
+    public void setDimension(int dimension) {
+        this.dimension = dimension;
+    }
+
 
     public Shell() {
     }

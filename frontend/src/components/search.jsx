@@ -4,16 +4,13 @@ const Search = () => {
 
 
     return(
-        <div> 
+        <div>
             <form>
-
-                <input className="search" placeholder="search..."  type="text"     />
-
+                <input className="search" placeholder="search..." type="text" />
             </form>
-
-
         </div>
-
     )
+
+
 }
 export default Search;

@@ -1,26 +1,24 @@
-
+import React, {useState, useEffect} from 'react';
 import './App.css'
 import Caseitem from './components/caseitem'
 import Caselist from './components/caselist'
 import Header from './components/header'
+import axios from 'axios';
+
 
 function App() {
-    const [fetchedModels, setFetchedModels] = useState([]);
-    useEffect(() => {
-      const getModels = async () =>{
-        const models = await axios.get(
-          "http://"
-        )
-      }
-      return () => {
-        cleanup
-      }
-    }, [input])
+  
+
+
+
+  /*handleSubmit = async (termFromSearchBar) => {
+    const response = await fetch ("/shell/model/"+{result})
+  }*/
   
 
   return (
     <div className="App">
-      <Header />
+      <Header  />
       <div className="itemplacement">
       <div className="caselistplacement">
       <Caselist />
