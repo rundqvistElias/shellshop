@@ -1,23 +1,34 @@
 package com.example.demo.entities;
 
+
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name="shell")
 
 public class Shell {
-
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     private String color;
     private String info;
     private int dimension;
+
+
+    public Shell() {
+    }
+
+    public Shell(long id, String name, String color, String info, int dimension) {
+        this.id = id;
+        this.name = name;
+        this.color = color;
+        this.info = info;
+        this.dimension = dimension;
+
+    }
 
     public long getId() {
         return id;
@@ -60,18 +71,6 @@ public class Shell {
     }
 
 
-    public Shell() {
-    }
-
-
-
-    public Shell(long id, String name, String color, String info) {
-        this.id = id;
-        this.name = name;
-        this.color = color;
-        this.info = info;
-    }
-
     @Override
     public String toString() {
         return "Shell{" +
@@ -79,6 +78,9 @@ public class Shell {
                 ", name='" + name + '\'' +
                 ", color='" + color + '\'' +
                 ", info='" + info + '\'' +
+                ", dimension=" + dimension +
+               + '\'' +
                 '}';
     }
+
 }

@@ -20,7 +20,7 @@ public class ShellController {
     @GetMapping("/shell/model/{phrase}")
     public List<Shell> getShellByModelSearch(@PathVariable String phrase){return shellService.getShellByModelName(phrase);}
 
-
+    @GetMapping("/shell/model/modelid")
 
     @PostMapping("/shell/add")
     public Shell createShell(@RequestBody Shell shell) {return shellService.createShell(shell);}

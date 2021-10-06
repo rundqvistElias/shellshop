@@ -1,16 +1,24 @@
-.app{
+.caseHeader{
+    height:90px;
+    width: 100vw;
     display:flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.itemplacement{
+.firstHeaderItem{
+    display:flex;
+    padding:10px;
+    margin: 150px;
+}
+
+.secondHeaderItem{
     display: flex;
-    
-}
-
-.caselistplacement{
-    display:flex;
-}
-
-.caseitemplacement{
-    display:flex;
+    padding:10px;
+    margin: 150px;
 }

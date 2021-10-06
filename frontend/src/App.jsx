@@ -25,14 +25,16 @@ import Cart from './pages/Cart';
 
   return (
     <div className="App">
-      <header>
-        <button onClick={() => navigateTo(PAGE_CART)}>
-          Go to Cart ({getCartTotal()})
-        </button>
+      <header className="caseHeader">
 
-        <button onClick={() => navigateTo(PAGE_PRODUCTS)}>
+        <button className="secondHeaderItem" onClick={() => navigateTo(PAGE_PRODUCTS)}>
           View Products
         </button>
+
+        <button className="firstHeaderItem" onClick={() => navigateTo(PAGE_CART)}>
+          Go to Cart ({getCartTotal()})
+        </button>
+              
       </header>
       {page === PAGE_PRODUCTS && (
         <Products cart={cart} setCart={setCart} />

@@ -1,7 +1,9 @@
 import React from "react";
 
 export default function cart({cart, setCart}) {
-   
+
+
+
     
     const clearCart = () => {
         setCart([])
@@ -19,7 +21,7 @@ export default function cart({cart, setCart}) {
           <div className="products">
             {cart.map((shell, index) => (
               <div className="product" key={index}>
-                <h3>{shell.name}</h3>
+                <h3>{shell.name}, fits:</h3>
                 
                 <input
                   value={shell.quantity}
@@ -30,9 +32,6 @@ export default function cart({cart, setCart}) {
                     )
                   }
                 />
-                <button onClick={() => removeFromCart(product)}>
-                  Remove
-                </button>
               </div>
             ))}
           </div>
